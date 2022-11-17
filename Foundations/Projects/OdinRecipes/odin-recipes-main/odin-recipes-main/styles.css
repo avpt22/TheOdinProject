@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(255, 255, 238);
+}
+h1 {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-decoration: underline black;
+}
+ul {
+   font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+} 
+li {
+   display: inline; 
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
