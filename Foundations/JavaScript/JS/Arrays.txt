@@ -1,0 +1,43 @@
+Arrays 
+    Variables that holds more values
+
+
+Converting arrays to strings
+toString() 
+    Converts an array to a string of comma seperated array values. 
+        ex. 
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    (document.getElementById("demo").innerHTML = )fruits.toString(); #getElementById returns an element object from HTML that matches an id with a specific string. 
+        result:
+    Banana,Orange,Apple,Mango
+
+join()
+    Also joins all array elements into a string. It behaves like toString(), but you can also specify the seperator. 
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.join(" * ")
+        result:
+    Banana * Orange * Apple * Mango
+
+
+Popping and pushing
+    Working with arrays it's easy to remove elements and add new elements.
+    popping: 
+        out of an array
+    pushing:
+        into an array
+pop()
+    removes the last element from an array
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.pop();
+        result:
+    Banana,Orange,Apple
+
+    Can also return the value that was popped out:
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit = fruits.pop();
+        Mango
+
+
+
