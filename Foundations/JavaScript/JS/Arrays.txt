@@ -39,5 +39,127 @@ pop()
     let fruit = fruits.pop();
         Mango
 
+push()
+    Adds new element to an array at the end 
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.push("Kiwi");
+        result
+    Banana,Orange,Apple,Mango,Kiwi
+
+    returns new array length
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let length = fruits.push("Kiwi");
+        result:
+    5
 
 
+Shifting elements
+    Equivalent to popping, but works on the first element instead of the last
+shift()
+    Removes the first array element and shifts all other elements to a lower index (to the left). 
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.shift();
+        result:
+    Orange,Apple,Mango
+
+    returns the value that was shifted out
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit = fruits.shift();
+        result
+    Banana
+
+unshift()
+    adds a new element to an array at the beginning and unshifts older elements.
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.unshift("Lemon");
+        results:
+    Lemon,Banana,Orange,Apple,Mango
+
+
+changing elements
+    Array elements are accessed using their index number:
+        0 - first
+        1 - second
+        2 - third ...
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits[0] = "Kiwi";
+        results.
+    Kiwi,Orange,Apple,Mango 
+
+Array length
+length 
+    provides an easy way to append a new element to an array
+        ex
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits[fruits.length] = "Kiwi";
+        results
+    Banana,Orange,Apple,Mango,Kiwi
+
+Array delete
+    Warning !
+    Array elements can be deleted using the JavaScript operator delete.
+    Using delete leaves undefined holes in the array.
+    Use pop() or shift() instead.
+delete()        
+        ex
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    delete fruits[0];
+        results
+    The first fruit is: undefined
+
+splice()
+    remove elements without leaving "holes" in the array
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(0, 1);
+        The first parameter (0) defines the position where new elements should be added (spliced in).
+        The second parameter (1) defines how many elements should be removed.
+        The rest of the parameters are omitted. No new elements will be added.
+        results:
+    Orange,Apple,Mango
+
+slice()
+    slices out a piece of an array into a new array
+        ex.
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(1); 
+        results
+    Orange,Lemon,Apple,Mango
+    note: The slice() method creates a new array.
+    The slice() method does not remove any elements from the source array.
+        ex.
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(3); # Slices out part of an array from the third element
+        results
+    Apple,Mango
+        ex.
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(1, 3); # Can take two arguments, selects elements from the start argument and up to the end argument (not including end argument)
+        results
+    Orange,Lemon'
+        ex. 
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(2); # If the end argument is omitted (the first examples) the rest of the arrays are sliced out
+        results
+    Lemon,Apple,Mango
+
+
+toString() - automatic
+    JS automatically converts an array to a comma sepreated string when a primative value is expected = always when you try to output an array. 
+    Both examples give the same result:
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.toString();
+        results
+    Banana,Orange,Apple,Mango
+        ex.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+        results
+    Banana,Orange,Apple,Mango
