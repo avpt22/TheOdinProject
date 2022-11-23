@@ -1,0 +1,51 @@
+for loop
+    for (initializer; condition; final-expression) {
+        // code to run
+    }
+
+    Here we have:
+    1. The keyword for, followed by some parentheses.
+    2. Inside the parentheses we have three items, separated by semicolons:
+        a. An initializer — this is usually a variable set to a number, which is incremented to 
+        count the number of times the loop has run. It is also sometimes referred to as a counter variable.
+        b. A condition — this defines when the loop should stop looping. This is generally an expression 
+        featuring a comparison operator, a test to see if the exit condition has been met.
+        c. A final-expression — this is always evaluated (or run) each time the loop has gone through a full 
+        iteration. It usually serves to increment (or in some cases decrement) the counter variable, to bring 
+        it closer to the point where the condition is no longer true.
+    3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+
+
+const results = document.querySelector('#results');
+
+function calculate() {
+    for (let i = 1; i <10; i++) {
+        const newResult = `${i} x ${i} = ${i * i}`;
+        results.textContent += `${newResult}\n`;
+    }
+    results.textContent += '\nFinished!';
+}
+
+const calculateBtn = document.querySelector('#calculate');
+const clearBtn = document.querySelector('#clear');
+
+calculateBtn.addEventListener('click', calculate);
+clearBtn.addEventListener('click', () => results.textContent = '');
+
+// This code calculates squares for the numbers from 1 to 9 and writes out the results.
+it's the for loop that performs the calculation
+
+for (let i= 1; i < 10; i++)
+    1. let i = 1; : the counter variable 'i' starts at '1'. We have to use let for the counter
+    because we're reassigning it each time we go round the loop.
+    2. i <10; : keep the loop going for as long that 'i' is smaller than '10'.
+    3. i++; : adds one to 'i' each time the loops goes around. 
+
+Inside the loop we calculate the square of the current value of 'i' = i * i. We create a string
+expressing the calculations we made and the result. Then adds the string to the output text.
+\n is added so the next string that's added will begin on a new line:
+    1. first run: i = 1 = 1 x 1 = 1.
+    2. second rund: i = 2 = 2 x 2 = 4.
+    3. ...
+    4. when 'i' becomes equal to 10 the loop will stop and will move on to the next part of the code below 
+    the loop = printing "Finished!".
